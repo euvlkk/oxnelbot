@@ -9,7 +9,7 @@ const groq = new Groq({
 
 // Start Command
 bot.start((ctx) => {
-  ctx.reply("🖤 OXNEL AI — Carti Mode Engaged 🎤💫");
+  ctx.reply("💫 OXNEL AI — Carti Mode Engaged ✨🧛‍♂️");
 });
 
 // Handle Messages
@@ -18,11 +18,11 @@ bot.on("text", async (ctx) => {
 
   try {
     const reply = await groq.chat.completions.create({
-      model: "llama3-8b-8192",
+      model: "llama3-8b",   // ← تم التعديل هنا
       messages: [
         {
           role: "system",
-          content: "You are Carti AI. Respond like Playboi Carti with vibes, adlibs, and energy.",
+          content: "You are Carti AI. Respond like Playboi Carti with vibes, adlibs, and swag.",
         },
         {
           role: "user",
